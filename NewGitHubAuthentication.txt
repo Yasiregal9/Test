@@ -1,0 +1,75 @@
+See video, start at 4 minute mark if this text file is not
+sufficient to get it to work.
+
+GitHub made 2 changes last summer. They did not 
+seem to affect me until  I changed 
+my GitHub password. Then I had to change one
+setting by typing:
+
+  git config --global push.default simple
+
+And then go through a long process to change how you
+let local git have access to remote GitHub.  
+When in git you wanted to do a git push, git used 
+to just ask for your username and password and it worked.
+That no longer works, you need to use a token based system.
+There are a few choices, I took the recommended ones.
+Here are the steps.
+
+First, install "GitHub CLI" in your virtual machine
+
+go to 
+    github.com/cli/cli/releases/tag/v2.5.1
+
+select and click on the 
+    gh_2.5.1_linux_386.deb  (or you can just download that file I posted in Canvas)
+
+when the download finishes, open your download folder,
+right click on that file new file, and select
+from the drop down menu 
+    GDebi Pachage Installer
+
+give it the    bcuser    password
+
+Now open a new command window and enter
+
+  gh auth login
+
+You are going to answer all the questions with the defaults.
+
+Answer first question by using the enter key to take the
+  select default  > GitHub.com
+
+for the 2nd question, again, take the default, HTTPS, 
+  just hit the enter key
+
+for the 3rd question, type capital Y and then enter
+
+for the 4th question, again take the default, which is
+Login with a web browser, so just hit the enter key
+
+Important:
+Copy down the XXXX-XXXX code it gives you and then
+press enter again
+
+It opens a browser window, enter that code, and 
+  click the green continue button
+
+In the next screen, just click the green Authorize button
+
+You should see a success screen
+
+Now can go back to the command window where you were trying
+to do a push and again do a get push
+
+When you do, it will give you some strange message about 
+"Did you mean ..." but ignore all that, you should also
+see lines that say "Compressing objects ..."
+ "Writing objects ..."
+and it will have succeeded.
+
+
+
+
+
+
